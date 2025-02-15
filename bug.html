@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <script>
+    // Incorrect way to remove an element from the DOM
+    document.getElementById('myDiv').remove(); //This is correct
+    document.getElementById('myDiv').parentNode.removeChild(document.getElementById('myDiv'));
+  </script>
+</body>
+</html>
